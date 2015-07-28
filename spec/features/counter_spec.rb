@@ -7,6 +7,7 @@ describe 'user can see landing page' do
   end
   scenario 'user sees integers on page' do
     visit '/'
-    expect(page).to have_content()
+    @num = Num.create
+    expect(@num.random_number).to be_a(Integer)
   end
 end
